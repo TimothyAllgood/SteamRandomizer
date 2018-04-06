@@ -1,0 +1,235 @@
+$main-font: 'Ubuntu', sans-serif;
+$background: #1b2838;
+$font: #bbb9b7;
+
+$mobile: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+
+
+body{
+    font-family: $main-font;
+    background: $background;
+    color: $font;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: $font;
+}
+
+.login-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .login{
+        
+    }
+}
+
+.user-info{
+    width: 95%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .name{
+        padding-right: 15px;
+    }
+    .avatar{
+         padding-right: 15px;
+    }
+    button{
+    color: $font;
+    background: none;
+    border: 2px solid $font;
+    transition: all ease-in 0.2s;
+    position: relative;
+    padding: 10px;
+    &:hover{
+        background: $font;
+        color: $background;
+    }
+        
+    }
+    .logout{
+        
+    }
+}
+
+.library{
+    width: 20%;
+    margin: 0;
+    padding: 0px;
+    float: left;
+    height: 80vh;
+    overflow: hidden;
+        &:hover{
+            overflow-y: scroll;
+        }
+        
+    &::-webkit-scrollbar{
+        float: left;
+        width: 20px;
+    }
+    &::-webkit-scrollbar-track{
+        background: #2a3f5a;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #101822;
+        &:hover{
+            background: #172230;
+        }
+
+    }
+    
+}
+.random{
+    width: 66%;
+    height: 80vh;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .randomWidth{
+        width: 300px;
+    }
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-btn{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    color: $font;
+    background: none;
+    border: 2px solid $font;
+    transition: all ease-in 0.2s;
+    &:hover{
+        background: $font;
+        color: $background;
+    }
+    &:focus{
+        outline: 0;
+    }
+    a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        transition: all ease-in 0.2s;
+        padding: 17px 0;
+        &:hover{
+        color: $background;
+    }
+    }
+}
+
+.sidebar{
+    position: relative;
+    float: right;
+    height: 83vh;
+    width: 10%;
+    text-align: center;
+    .social-media{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        ul{ 
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            li{
+                width: 30%;
+                display: inline-block;
+                a{
+                    width: 100%;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (min-width:769px) and (max-width: $laptop){
+    .library{
+        height: 75vh;
+    }
+    
+    .random{
+        height: 75vh;
+    }
+    
+    .sidebar{
+        width: 13%;
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .library{
+        display: none;
+        height: 70vh;
+    }
+    
+    .random{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    .sidebar{
+        width: 100%;
+        height: 100%;
+        .social-media{
+            width: 100%;
+            position: relative;
+            text-align: center;
+            ul{
+                li{
+                    width: 30%;
+                    max-width: 64px;
+                    a{
+                        img{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .launch{
+        display: none;
+    }
+    
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display: block;
+    }
+}
+

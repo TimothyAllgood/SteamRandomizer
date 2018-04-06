@@ -1,0 +1,1 @@
+sass --watch C:\xampp\htdocs\steam\scss\styles.scss:C:\xampp\htdocs\steam\css\styles.css
